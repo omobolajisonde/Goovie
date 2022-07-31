@@ -1,0 +1,59 @@
+@import "../../sass/variables";
+.pagination {
+  list-style: none;
+  display: flex;
+  margin: 0 7.5rem;
+}
+.page {
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+  & > button {
+    font: inherit;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-weight: 500;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 50%;
+    color: $bg-color;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      color: $color-grey-light-1;
+      background-color: $color-secondary;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      font-weight: 500;
+      background-color: $color-primary;
+      border-radius: 50%;
+      color: $bg-color;
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+    }
+    &:hover {
+      color: $color-grey-light-1;
+      background-color: $color-secondary;
+    }
+    &--active {
+      &:link,
+      &:visited {
+        color: $color-grey-light-1;
+        background-color: $color-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../sass/variables";
+@import "../../sass/animation";
+.movies {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    [grid-start] minmax(min-content, 30rem) [grid-end]
+  );
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.movie {
+  position: relative;
+  cursor: pointer;
+  &:hover &__title {
+    bottom: 15%;
+    opacity: 1;
+  }
+  &__rating {
+    display: inline-block;
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    padding: 5px 1rem 3px 2.25rem;
+    background-color: $color-secondary;
+    clip-path: polygon(100% 0%, 100% 53%, 100% 100%, 0 100%, 35% 53%, 0 0);
+  }
+  &__poster {
+    width: 100%;
+    border-radius: 7.5px;
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 1.65rem;
+    text-transform: capitalize;
+    transition: all 0.3s ease-out;
+    position: absolute;
+    left: 1rem;
+    bottom: -7.5%;
+    opacity: 0;
+  }
+  &__cta {
+    grid-column: grid-start 1 / -1;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+.action {
+  margin-top: 5px;
+  & svg {
+    width: 2rem;
+    height: 2rem;
+    fill: $color-primary;
+  }
+  & > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    &:focus {
+      outline: none;
+      animation: beep 0.2s ease-in;
+      & > svg {
+        fill: $color-secondary;
+      }
+    }
+  }
+  &__fav {
+    margin-right: 1rem;
+  }
+  &__copy {
+  }
+}

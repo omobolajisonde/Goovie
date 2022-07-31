@@ -1,0 +1,66 @@
+@import "../../sass/variables";
+.movies__section {
+  padding: 4rem;
+  padding-top: 0;
+  font-size: 1.6rem;
+  & > h1 {
+    text-transform: capitalize;
+  }
+}
+.genres {
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.genre {
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  & > button {
+    font: inherit;
+    display: inline-block;
+    padding: 5px 1.25rem;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 1rem;
+    color: $bg-color;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      color: $color-grey-light-1;
+      background-color: $color-secondary;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: 5px 1.25rem;
+      background-color: $color-primary;
+      border-radius: 1rem;
+      color: $bg-color;
+      text-decoration: none;
+      transition: all 0.25s ease-in-out;
+    }
+    &:hover {
+      color: $color-grey-light-1;
+      background-color: $color-secondary;
+    }
+
+    &--active {
+      &:link,
+      &:visited {
+        color: $color-grey-light-1;
+        background-color: $color-secondary;
+      }
+    }
+  }
+}
+
+.desc {
+  margin-top: 1.5rem;
+  &__text {
+  }
+}

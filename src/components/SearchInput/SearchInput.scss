@@ -1,0 +1,39 @@
+@import "../../sass/variables";
+.search{
+    display: flex;
+    align-items: center;
+    &__btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: rgba(#e2313e,.18);
+        border: none;
+        border-radius: 50%;
+        margin-left: 1rem;
+        cursor: pointer;
+        transition: all .3s ease-out;
+        &:hover,&:focus{
+            background-color: $color-grey-light-1;
+        }
+        & svg{
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    &__input{
+        font-family: inherit;
+        border: 1px solid transparent;
+        padding: 8px;
+        border-radius: 1rem;
+        transition: border .3s ease-in-out;
+        &:focus{
+            outline: none;
+            border: 1px solid #e2313e;
+        }
+    }
+    &__input--hidden{
+        display: none;
+    }
+}
